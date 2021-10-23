@@ -9,6 +9,7 @@ I've created this repo to publish all the snippets I develop for WordPress websi
   - [Technologies](#technologies)
   - [How to use a snippet](#how-to-use-a-snippet)
   - [Status](#status)
+  - [Snippets](#snippets)
   - [Contact](#contact)
 
 ## Technologies
@@ -16,7 +17,7 @@ I've created this repo to publish all the snippets I develop for WordPress websi
 The snippets in this repo are developed with:
 
 ![HTML5](https://github.com/borjalofe/borjalofe/blob/main/images/html5_22x22.png)
-![JavaScript](https://github.com/borjalofe/borjalofe/blob/main/images/javascript_22x22.png)
+![Vanilla JavaScript](https://github.com/borjalofe/borjalofe/blob/main/images/javascript_22x22.png)
 ![PHP](https://github.com/borjalofe/borjalofe/blob/main/images/php_22x22.png)
 
 CSS is on your side.
@@ -30,6 +31,11 @@ If there's any exception, I'll say it in the snippet's page.
 ## Status
 
 The snippets work fine with WordPress 5.8.
+
+## Snippets
+
+- WooCommerce Snippets:
+  - [Show Variation Price](woocommerce/show-variation-price.md)
 
 ## Contact
 
