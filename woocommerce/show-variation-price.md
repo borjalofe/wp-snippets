@@ -22,7 +22,7 @@ function selected_variation_price_replace_variable_price_range(){
 
     if( $product->is_type('variable') ):
     ?>
-    <script id="modificar-precio" type="text/javascript">
+    <script id="show-variation-price" type="text/javascript">
         window.onload = (e) => {
             let labels = document.querySelectorAll('.variations label');
             let params = [];
@@ -46,11 +46,18 @@ function selected_variation_price_replace_variable_price_range(){
                             if (variation.attributes[param[0]] === param[1]) {
                                 matches++;
                             }
-                        })
-                        
+                        });
+                            
                         if (matches === params.length) {
-                            let price = variation.display_price;
-                            let priceText = '<span class="woocommerce-Price-amount amount"><bdi>'+price+',00<span class="woocommerce-Price-currencySymbol">€</span></bdi></span>';
+                            let price = (''+variation.display_price);
+                            priceTmp = price.split('.');
+                            if (priceTmp.length < 2) {
+                                priceTmp[1] = '00';
+                            } else if (priceTmp[1].length < 2) {
+                                priceTmp[1] += '0';
+                            }
+                            price = priceTmp.join(',');
+                            let priceText = '<span class="woocommerce-Price-amount amount"><bdi>'+price+'<span class="woocommerce-Price-currencySymbol">€</span></bdi></span>';
                             document.querySelector('p.price').innerHTML = priceText;
                         }
                     });
